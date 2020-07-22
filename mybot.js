@@ -915,8 +915,11 @@ client.on("message", (message) => {
           break;
       }
     }
+    var options = {
+  tl: lang
+}
     var txt4mp3 = args.join(" ");
-    txtomp3.saveMP3(txt4mp3, "tmp.mp3" , lang , function(err, absoluteFilePath){
+    txtomp3.saveMP3(txt4mp3, "tmp.mp3" , options , function(err, absoluteFilePath){
       if(err){
         console.log(err);
         message.reply('dumb');
@@ -1531,6 +1534,49 @@ client.on("presenceUpdate", (old, novo) => {
             }
         }
     }
+    if(novo.user.id == '149950354778226688'&&guildsIndex==0){
+      let channelID;
+      if(novo.user.lastMessageChannelID == null){
+          channelID = '149956319380504576';
+      } else {
+          channelID = novo.user.lastMessageChannelID;
+      }
+      let channel = client.channels.cache.filter(channel => channel.id == channelID).first();
+      let stock = JSON.parse(fs.readFileSync("./noah.json", "utf8"));
+      let stockIO = Math.floor(Math.random() * 17) - 5;
+      let stockIdle = Math.floor(Math.random() * 21) - 10;
+      let stockDnD = Math.floor(Math.random() * 31) - 15;
+      if(channel){
+          if(novo.status == 'online'){
+              var newStock = stock.curr+stockIO;
+              if(newStock < config.stockMin) newStock = config.stockMin;
+              channel.send('NOAH MOMENTS HAVE BEGUN');
+              stock.prev = stock.curr;
+              stock.curr = newStock;
+          } else if(novo.status == 'offline') {
+              var newStock = stock.curr-stockIO;
+            if(newStock < config.stockMin) newStock = config.stockMin;
+              channel.send('NOAH MOMENTS HAVE ENDED');
+              stock.prev = stock.curr;
+              stock.curr = newStock;
+          } else if(novo.status == 'idle') {
+              var newStock = stock.curr+stockIdle;
+              if(newStock < config.stockMin) newStock = config.stockMin;
+              channel.send('NOAH MOMENTS HAVE BEEN PAUSED');
+              stock.prev = stock.curr;
+              stock.curr = newStock;
+          } else {
+              var newStock = stock.curr+stockDnD;
+              if(newStock < config.stockMin) newStock = config.stockMin;
+              channel.send('NOAH MOMENTS HAVE BEEN SUPPRESSED');
+              stock.prev = stock.curr;
+              stock.curr = newStock;
+          }
+          fs.writeFile("./noah.json", JSON.stringify(stock), (err) => {
+              if (err) throw err;
+          });
+      }
+  }
     guildsIndex++;
     if(guildsIndex==guildsTotal){
         guildsIndex = 0;
