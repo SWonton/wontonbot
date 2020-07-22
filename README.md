@@ -12,69 +12,69 @@ General use Discord bot that reads and responds to commands.
 
 Auto commands (no prefix):
 
-Can I get a rip in the chat : rip
-Press f to pay respects : F
-gn : good night
-gm : good morning
+- Can I get a rip in the chat : rip
+- Press f to pay respects : F
+- gn : good night
+- gm : good morning
 
 Commands:
 
-help - Recursive joke here
-define - Search Merriam-Webster Dictionary
-udefine - Search Urban Dictionary
-timer - Format is "[days]:[hrs]:[min]:(sec) [message]". Max Time is 7 days.
-wiki - Search Wikipedia for articles
-image - Search Google Images
-r34 - NSFW Search
-boobs - r34 Search for boobs
-r - Show reaction image
-allr - Reaction image list 
-spam - Repeat message 5 times (Cannot spam commands)
-bigtext (shortcut "bt") - Changes characters to emoji counterpart
-uptime - Bot uptime
-wordcount - Amount of times a word has been said globally
-userwordcount - Amount of times a word has been said by a user
-copypasta - Pastes specificed copypasta 
-copypasta-add - Add own copypasta
-copypasta-list - Show list of copypastas
-oof - Global oof counter
-censorcheck - Checks if "er" censor is on/off
-check - Amount of times the "die" command has been called
-ping - Pong
-gus - Gus copypasta
-test - Johnny Test ASCII
-egg - Random egg picture
-cake - Random cake picture
-juju - Spirit reading
-toF- Celsius to Fahrenheit
-toC- Fahrenheit to Celsius
-simpemb - format is "(Title) [Subtext]"
-blackjack - play blackjack with reactions
+- help - Recursive joke here
+- define - Search Merriam-Webster Dictionary
+- udefine - Search Urban Dictionary
+- timer - Format is "[days]:[hrs]:[min]:(sec) [message]". Max Time is 7 days.
+- wiki - Search Wikipedia for articles
+- image - Search Google Images
+- r34 - NSFW Search
+- boobs - r34 Search for boobs
+- r - Show reaction image
+- allr - Reaction image list 
+- spam - Repeat message 5 times (Cannot spam commands)
+- bigtext (shortcut "bt") - Changes characters to emoji counterpart
+- uptime - Bot uptime
+- wordcount - Amount of times a word has been said globally
+- userwordcount - Amount of times a word has been said by a user
+- copypasta - Pastes specificed copypasta 
+- copypasta-add - Add own copypasta
+- copypasta-list - Show list of copypastas
+- oof - Global oof counter
+- censorcheck - Checks if "er" censor is on/off
+- check - Amount of times the "die" command has been called
+- ping - Pong
+- gus - Gus copypasta
+- test - Johnny Test ASCII
+- egg - Random egg picture
+- cake - Random cake picture
+- juju - Spirit reading
+- toF - Celsius to Fahrenheit
+- toC - Fahrenheit to Celsius
+- simpemb - format is "(Title) [Subtext]"
+- blackjack - play blackjack with reactions
 
 Voice Chat Commands:
-play - bot text-to-speech, can identify iso for different accents/languages
-iso - list of iso codes
-commence - plays sound files in voice channel
-allsound - list of sound files
+- play - bot text-to-speech, can identify iso for different accents/languages
+- iso - list of iso codes
+- commence - plays sound files in voice channel
+- allsound - list of sound files
 
 Econ Commands:
-stock/stocks - Check worth of stocks
-balance/bal - Check your or another members balance
-buy (max) - Buy stocks
-sell (all) - Sell stocks
-baltop - Top 10 richest members  
-stocktop - Top 10 stock owners
-pay - Give someone else money
-speak - Speak as bot ($100)
+- stock/stocks - Check worth of stocks
+- balance/bal - Check your or another members balance
+- buy (max) - Buy stocks
+- sell (all) - Sell stocks
+- baltop - Top 10 richest members  
+- stocktop - Top 10 stock owners
+- pay - Give someone else money
+- speak - Speak as bot ($100)
 
 Admin Commands:
 
-status - Sets bot status message
-songstatus (on/off) - Sets bot status to currently playing song
-speak - Speak as bot (no charge)
-prefix - Change server prefix
-die - Terminates bot
-censor - Turns on/off "er" censor
+- status - Sets bot status message
+- songstatus (on/off) - Sets bot status to currently playing song
+- speak - Speak as bot (no charge)
+- prefix - Change server prefix
+- die - Terminates bot
+- censor - Turns on/off "er" censor
 
 ## Instructions
 
@@ -92,6 +92,8 @@ Edit the `config.json` file in any text editor:
 2) Add your Discord user ID, as well as any other admins' IDs at the `"owners"` line. [Instructions to get ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 3) Get a Merriam-Webster Dictionary API key by visiting their [website](https://dictionaryapi.com/)
 4) Add your Merriam-Webster API key to the `dictionApiKey` line.
+5) Get a CoinMarketCap API key by visiting their [website](https://coinmarketcap.com/api/)
+6) Add your CoinMarketCap API key to the `coinMktCapKey` line.
 
 Run the bot by executing `node mybot.js`
 
