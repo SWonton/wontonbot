@@ -1,0 +1,8 @@
+{
+    "token": "DISCORD-API-KEY-HERE",
+    "prefix" : "_",
+    "dictionApiKey" : "DICTIONARY-API-KEY-HERE",
+    "owners" : ["OWNER-DISCORD-ID-HERE", "SECOND-DISCORD-ID-HERE (OPTIONAL)"],
+    "stockMin" : 15,
+    "coinMktCapKey" : "COIN-MKT-CAP-KEY-HERE"
+}

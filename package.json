@@ -1,0 +1,33 @@
+{
+  "name": "wonton_bot",
+  "version": "1.69.0",
+  "description": "discord exists",
+  "main": "mybot.js",
+  "author": "my name",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "axios": "^0.19.2",
+    "booru": "^2.2.3",
+    "bufferutil": "^4.0.0",
+    "crypto-price": "0.0.6",
+    "discord": "^0.8.2",
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "discord.js": "^12.2.0",
+    "free-google-image-search": "^1.0.0",
+    "g-i-s": "^2.1.5",
+    "google-image-searcher": "^1.0.9",
+    "ibsearch": "^1.0.1",
+    "needle": "^2.5.0",
+    "node-fetch": "^2.6.0",
+    "node-gyp": "^4.0.0",
+    "node-html-to-image": "^2.1.1",
+    "opusscript": "0.0.6",
+    "request-promise": "^4.2.6",
+    "say": "^0.15.0",
+    "text-to-mp3": "github:enricoaleandri/text-to-mp3",
+    "urban-dictionary": "^2.2.1",
+    "valid-filename": "^3.1.0",
+    "wikijs": "^6.0.1",
+    "winston": "^3.0.0"
+  }
+}
