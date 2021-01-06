@@ -6,7 +6,7 @@
   "author": "my name",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "booru": "^2.2.3",
     "bufferutil": "^4.0.0",
     "crypto-price": "0.0.6",
